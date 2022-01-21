@@ -1,9 +1,9 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Employee } from './employee';
-import { EmployeeService } from './employee.service';
+import { Employee } from './interfaces/employee.interface';
+import { EmployeeService } from './services/employee.service';
 import {NgbModal, ModalDismissReasons, NgbModule, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
-import { EditEmployeeModalComponent } from './edit-employee-modal/edit-employee-modal.component';
+import { EditEmployeeModalComponent } from './components/edit-employee-modal/edit-employee-modal.component';
 
 
 @Component({
