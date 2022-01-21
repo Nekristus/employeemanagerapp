@@ -35,18 +35,19 @@ export class AppComponent implements OnInit{
     button.type = 'button';
     button.style.display = 'none';
     button.setAttribute('data-toggle', 'modal');
-    if (mode == 'add') {
+    if (mode === 'add') {
       button.setAttribute('data-target', '#addEmployeeModal'); 
     }
-    if (mode == 'edit') {
+    if (mode === 'edit') {
       button.setAttribute('data-target', '#updateEmployeeModal'); 
     }
-    if (mode == 'delete') {
+    if (mode === 'delete') {
       button.setAttribute('data-target', '#deleteEmployeeModal'); 
     }
     container.appendChild(button);
     button.click();
   }
+  
   public openDeleteModal(): void{
     console.log("It just deletes.");
   }
@@ -56,5 +57,5 @@ export class AppComponent implements OnInit{
   }
   public openAddModal(): void{
     console.log("It just adds.");
-  }
+  } 
 }
