@@ -7,13 +7,8 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" (click)="onOpenModal(null, 'add')"> Add Employee <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" (click)="openAddModal()"
-                    target="_blank">Add Employee</a>
-            </li>
-
         </ul>
         <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -22,8 +17,8 @@
     </div>
 </div>
 
-<main role="main" class="container" id="main-container">
-    <div class="container">
+<main role="main" class="container">
+    <div class="container" id="main-container">
         <div class="row">
             <div *ngFor="let employee of employees" class="col-md-6 col-xl-3">
                 <div class="card m-b-30">
@@ -46,9 +41,9 @@
                     <div class="card-body">
                         <div class="float-right btn-group btn-group-sm">
                             <a href="#" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip"
-                                data-original-title="Edit" (click)="openEditModal()"><i class="fa fa-pencil"></i> </a>
+                                data-original-title="Edit" (click)="onOpenModal(employee, 'edit')"><i class="fa fa-pencil"></i> </a>
                             <a href="#" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip"
-                                data-original-title="Delete" (click)="openDeleteModal()"><i class="fa fa-times"></i></a>
+                                data-original-title="Delete" (click)="onOpenModal(employee, 'delete')"><i class="fa fa-times"></i></a>
                         </div>
                         <ul class="social-links list-inline mb-0">
                             <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip"
@@ -67,3 +62,61 @@
         </div>
     </div>
 </main>
+
+<!-- Add Employee Modal -->
+
+<div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="addEmployeeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addEmployeeModalLabel">Add Employee</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Edit Employee Modal -->
+<div class="modal fade" id="updateEmployeeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateEmployeeModalLabel">Edit Employee</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <!-- Delete Employee Modal -->
+<div class="modal fade" id="deleteEmployeeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteEmployeeModalLabel">Delete Employee</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div> 

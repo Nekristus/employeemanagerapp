@@ -10,6 +10,7 @@ export class AddEmployeeModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
