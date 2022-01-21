@@ -2,6 +2,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
+import {NgbModal, ModalDismissReasons, NgbModule, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import { EditEmployeeModalComponent } from './edit-employee-modal/edit-employee-modal.component';
 
 
 @Component({
@@ -12,7 +14,7 @@ import { EmployeeService } from './employee.service';
 export class AppComponent implements OnInit{
   public employees: Employee[];
   
-  constructor(private employeeService: EmployeeService){}
+  constructor(private employeeService: EmployeeService, private modalService: NgbModal){}
 
   ngOnInit(){
     this.getEmployees();
@@ -51,10 +53,17 @@ export class AppComponent implements OnInit{
   public openDeleteModal(): void{
     console.log("It just deletes.");
   }
-  public openEditModal(): void{
-    console.log("It just edits.");
-
+  public openEditModal(employee: Employee): void{
+    const modal = this.modalService.open(EditEmployeeModalComponent, {
+      animation: true,
+      keyboard: true,
+      centered: true,
+      backdrop: true
+    });
+    modal.componentInstance.employee = employee;
   }
+  
+
   public openAddModal(): void{
     console.log("It just adds.");
   } 

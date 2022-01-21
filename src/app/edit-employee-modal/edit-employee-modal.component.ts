@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Employee } from '../employee';
 
 @Component({
   selector: 'app-edit-employee-modal',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditEmployeeModalComponent implements OnInit {
 
+  @Input() public employee: Employee;
+  
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.employee);
   }
 
 }
