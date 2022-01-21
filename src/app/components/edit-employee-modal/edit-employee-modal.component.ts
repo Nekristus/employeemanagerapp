@@ -13,6 +13,10 @@ export class EditEmployeeModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public saveChanges(): void {
+    //TODO: save changes here
     console.log(this.employee);
   }
 

@@ -61,6 +61,8 @@ export class AppComponent implements OnInit{
       backdrop: true
     });
     modal.componentInstance.employee = employee;
+
+    //TODO: call service, send to backend from here.
   }
   
 

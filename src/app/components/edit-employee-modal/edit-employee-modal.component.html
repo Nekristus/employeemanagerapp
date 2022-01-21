@@ -17,6 +17,41 @@
   </div>
 </div>
 -->
-<div class="modal-container" style="width: 300px; height: 300px;">
-  <p> ne kalispera </p>
+<div class="modal-container">
+  <!-- TODO: wire input fields to employee fields (hint: look at formgroup) -->
+  <div class="form-field">
+    <div class="title">
+      Name
+    </div>
+    <input class="input" type="text">
+  </div>
+  <div class="form-field">
+    <div class="title">
+      Email
+    </div>
+    <input class="input" type="text">
+  </div>
+  <div class="form-field">
+    <div class="title">
+      Job Title
+    </div>
+    <input class="input" type="text">
+  </div>
+  <div class="form-field">
+    <div class="title">
+      Phone
+    </div>
+    <input class="input" type="text">
+  </div>
+  <div class="form-field">
+    <div class="title">
+      Image URL
+    </div>
+    <input class="input" type="text">
+  </div>
+  <div class="button-confirm">
+    <button type="button" (click)="saveChanges()">
+      Confirm
+    </button>
+  </div>
 </div>
