@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.modal-container .form-field { 
+.modal-container.form-field { 
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -4,7 +4,7 @@ import { Employee } from '../../interfaces/employee.interface';
 @Component({
   selector: 'app-edit-employee-modal',
   templateUrl: './add-employee-modal.component.html',
-  styleUrls: ['./add-employee-modal.component.html']
+  styleUrls: ['./add-employee-modal.component.css']
 })
 export class AddEmployeeModalComponent implements OnInit {
 
