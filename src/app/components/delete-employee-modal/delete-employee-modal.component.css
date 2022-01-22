@@ -1,0 +1,31 @@
+.modal-container {
+    width: auto;
+    height: auto;
+    max-width: 80vw;
+    max-height: 50vh;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container .form-field { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-container .form-field .title { 
+
+}
+
+.modal-container .form-field .input { 
+
+}
+
+.modal-container .form-field .button-confirm {
+    margin: 16px;
+}
