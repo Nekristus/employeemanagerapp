@@ -43,7 +43,7 @@
                             <a href="#" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip"
                                 data-original-title="Edit" (click)="openEditModal(employee)"><i class="fa fa-pencil"></i> </a>
                             <a href="#" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip"
-                                data-original-title="Delete" (click)="openDeleteModal()"><i class="fa fa-times"></i></a>
+                                data-original-title="Delete" (click)="openDeleteModal(employee)"><i class="fa fa-times"></i></a>
                         </div>
                         <ul class="social-links list-inline mb-0">
                             <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip"
@@ -63,60 +63,3 @@
     </div>
 </main>
 
-<!-- Add Employee Modal -->
-
-<div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="addEmployeeModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="addEmployeeModalLabel">Add Employee</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!-- Edit Employee Modal -->
-<div class="modal fade" id="updateEmployeeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="updateEmployeeModalLabel">Edit Employee</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
-        </div>
-      </div>
-    </div>
-  </div> 
-
-  <!-- Delete Employee Modal -->
-<div class="modal fade" id="deleteEmployeeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="deleteEmployeeModalLabel">Delete Employee</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
-        </div>
-      </div>
-    </div>
-  </div> 

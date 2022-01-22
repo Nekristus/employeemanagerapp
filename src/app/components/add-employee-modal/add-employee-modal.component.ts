@@ -1,16 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Employee } from '../../interfaces/employee.interface';
 
 @Component({
-  selector: 'app-add-employee-modal',
+  selector: 'app-edit-employee-modal',
   templateUrl: './add-employee-modal.component.html',
-  styleUrls: ['./add-employee-modal.component.css']
+  styleUrls: ['./add-employee-modal.component.html']
 })
 export class AddEmployeeModalComponent implements OnInit {
 
+  @Input() public employee: Employee;
+
   constructor() { }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void { 
+  }
+
+  public saveChanges(): void {
+    //TODO: save changes here
+    console.log(this.employee);
   }
 
 }

@@ -4,6 +4,8 @@ import { Employee } from './interfaces/employee.interface';
 import { EmployeeService } from './services/employee.service';
 import {NgbModal, ModalDismissReasons, NgbModule, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import { EditEmployeeModalComponent } from './components/edit-employee-modal/edit-employee-modal.component';
+import { AddEmployeeModalComponent } from './components/add-employee-modal/add-employee-modal.component';
+import { DeleteEmployeeModalComponent } from './components/delete-employee-modal/delete-employee-modal.component';
 
 
 @Component({
@@ -50,8 +52,16 @@ export class AppComponent implements OnInit{
     button.click();
   }
   
-  public openDeleteModal(): void{
-    console.log("It just deletes.");
+  public openDeleteModal(employee: Employee): void{
+    const modal = this.modalService.open(DeleteEmployeeModalComponent, {
+      animation: true,
+      keyboard: true,
+      centered: true,
+      backdrop: true
+    });
+    modal.componentInstance.employee = employee;
+
+    //TODO: call service, send to backend from here.
   }
   public openEditModal(employee: Employee): void{
     const modal = this.modalService.open(EditEmployeeModalComponent, {
@@ -67,6 +77,12 @@ export class AppComponent implements OnInit{
   
 
   public openAddModal(): void{
-    console.log("It just adds.");
+    const modal = this.modalService.open(AddEmployeeModalComponent, {
+      animation: true,
+      keyboard: true,
+      centered: true,
+      backdrop: true
+    });
+    modal.componentInstance.employee; 
   } 
 }

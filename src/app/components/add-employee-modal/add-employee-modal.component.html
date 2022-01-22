@@ -1,20 +1,38 @@
-<!-- Add Employee Modal -->
-<!--
-<div class="modal fade" id="addEmployeeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="addEmployeeModalLabel">Add Employee</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
+<div class="modal-container">
+    <!-- TODO: wire input fields to employee fields (hint: look at formgroup) -->
+    <div class="form-field">
+      <div class="title">
+        Name
+      </div>
+      <input class="input" type="text">
     </div>
-</div> -->
+    <div class="form-field">
+      <div class="title">
+        Email
+      </div>
+      <input class="input" type="text">
+    </div>
+    <div class="form-field">
+      <div class="title">
+        Job Title
+      </div>
+      <input class="input" type="text">
+    </div>
+    <div class="form-field">
+      <div class="title">
+        Phone
+      </div>
+      <input class="input" type="text">
+    </div>
+    <div class="form-field">
+      <div class="title">
+        Image URL
+      </div>
+      <input class="input" type="text">
+    </div>
+    <div class="button-confirm">
+      <button type="button" (click)="saveChanges()">
+        Confirm
+      </button>
+    </div>
+  </div>

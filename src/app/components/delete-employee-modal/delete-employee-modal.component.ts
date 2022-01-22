@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Employee } from '../../interfaces/employee.interface';
 
 @Component({
   selector: 'app-delete-employee-modal',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteEmployeeModalComponent implements OnInit {
 
+  @Input() public employee: Employee;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  public saveChanges(): void {
+    //TODO: save changes here
+    console.log(this.employee);
+  }
+
 
 }
