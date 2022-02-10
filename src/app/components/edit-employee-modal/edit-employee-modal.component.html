@@ -1,34 +1,33 @@
-<div class="modal-container">
-  <!-- TODO: wire input fields to employee fields (hint: look at formgroup) -->
+<div class="modal-container" [formGroup]="dataForm">
   <div class="form-field">
     <div class="title">
       Name
     </div>
-    <input class="input" type="text">
+    <input class="input" formControlName="name" type="text">
   </div>
   <div class="form-field">
     <div class="title">
       Email
     </div>
-    <input class="input" type="text">
+    <input class="input" formControlName="email" type="text">
   </div>
   <div class="form-field">
     <div class="title">
       Job Title
     </div>
-    <input class="input" type="text">
+    <input class="input" formControlName="jobTitle" type="text">
   </div>
   <div class="form-field">
     <div class="title">
       Phone
     </div>
-    <input class="input" type="text">
+    <input class="input" formControlName="phone" type="text">
   </div>
   <div class="form-field">
     <div class="title">
       Image URL
     </div>
-    <input class="input" type="text">
+    <input class="input" formControlName="imageUrl" type="text">
   </div>
   <div class="button-confirm">
     <button type="button" (click)="saveChanges()">
